@@ -1,7 +1,7 @@
 {
-    "name":"kdyby/qrencode-extension",
+    "name":"kdyby/qr-encode",
     "type":"library",
-    "description":"Qrencode wrapper for Nette Framework",
+    "description":"QrEncode wrapper for Nette Framework",
     "keywords":["nette", "kdyby", "qr", "qrcode", "qrencode"],
     "homepage":"http://kdyby.org",
     "license":["BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
@@ -13,24 +13,20 @@
     ],
     "support":{
         "email":"filip@prochazka.su",
-        "issues":"https://github.com/kdyby/framework/issues"
+        "issues":"https://github.com/kdyby/qr-encode/issues"
     },
     "require":{
         "nette/nette":"*"
     },
-    "conflict":{
-        "kdyby/framework":"self.version"
-    },
     "suggest": {
-        "kdyby/curl-extension": "It's required for using a remote QrCode encoder provider."
+        "kdyby/curl": "It's required for using a remote QrCode encoder provider."
     },
     "autoload":{
         "psr-0":{
-            "Kdyby\\Extension\\QrEncode":""
+            "Kdyby\\QrEncode":"src/"
         },
         "classmap":[
-            "Kdyby/Extension/QrEncode/exceptions.php"
+            "src/Kdyby/QrEncode/exceptions.php"
         ]
-    },
-    "target-dir":"Kdyby/Extension/QrEncode"
+    }
 }
