@@ -18,6 +18,9 @@
     "require":{
         "nette/nette":"*"
     },
+	"require-dev": {
+		"nette/tester": "@dev"
+	},
     "suggest": {
         "kdyby/curl": "It's required for using a remote QrCode encoder provider."
     },
