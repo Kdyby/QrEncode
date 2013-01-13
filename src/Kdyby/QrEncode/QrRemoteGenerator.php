@@ -8,12 +8,12 @@
  * For the full copyright and license information, please view the file license.txt that was distributed with this source code.
  */
 
-namespace Kdyby\Extension\QrEncode;
+namespace Kdyby\QrEncode;
 
 use Kdyby;
 use Nette;
-use Kdyby\Extension\Curl\CurlSender;
-use Kdyby\Extension\Curl\Request;
+use Kdyby\Curl\CurlSender;
+use Kdyby\Curl\Request;
 use Nette\Diagnostics\Debugger;
 use Nette\Utils\Json;
 
@@ -26,20 +26,20 @@ class QrRemoteGenerator extends QrOptions implements IGenerator
 {
 
 	/**
-	 * @var \Kdyby\Extension\QrEncode\DI\Configuration
+	 * @var \Kdyby\QrEncode\DI\Configuration
 	 */
 	private $config;
 
 	/**
-	 * @var \Kdyby\Extension\Curl\CurlSender
+	 * @var \Kdyby\Curl\CurlSender
 	 */
 	private $curlSender;
 
 
 
 	/**
-	 * @param \Kdyby\Extension\QrEncode\DI\Configuration $config
-	 * @param \Kdyby\Extension\Curl\CurlSender $curlSender
+	 * @param \Kdyby\QrEncode\DI\Configuration $config
+	 * @param \Kdyby\Curl\CurlSender $curlSender
 	 */
 	public function __construct(DI\Configuration $config, CurlSender $curlSender = NULL)
 	{
@@ -84,7 +84,7 @@ class QrRemoteGenerator extends QrOptions implements IGenerator
 			$json = Json::decode($response->getResponse());
 			throw new InvalidStateException($json['error']);
 
-		} catch (Kdyby\Extension\Curl\Exception $e) {
+		} catch (Kdyby\Curl\Exception $e) {
 			throw new InvalidStateException($e->getMessage(), $e->getCode(), $e);
 		}
 	}

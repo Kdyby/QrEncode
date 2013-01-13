@@ -8,7 +8,7 @@
  * For the full copyright and license information, please view the file license.txt that was distributed with this source code.
  */
 
-namespace Kdyby\Extension\QrEncode\DI;
+namespace Kdyby\QrEncode\DI;
 
 use Kdyby;
 use Nette;
@@ -43,7 +43,7 @@ class QrExtension extends Nette\Config\CompilerExtension
 		$config = $this->getConfig($this->defaults);
 
 		$builder->addDefinition($this->prefix('config'))
-			->setClass('Kdyby\Extension\QrEncode\DI\Configuration')
+			->setClass('Kdyby\QrEncode\DI\Configuration')
 			->addSetup('$size', array($config['size']))
 			->addSetup('$errorCorrection', array($config['errorCorrection']))
 			->addSetup('$version', array($config['version']))
@@ -53,13 +53,13 @@ class QrExtension extends Nette\Config\CompilerExtension
 			->addSetup('$apiKey', array($config['apiKey']));
 
 		$generator = $builder->addDefinition($this->prefix('generator'))
-			->setClass('Kdyby\Extension\QrEncode\IGenerator');
+			->setClass('Kdyby\QrEncode\IGenerator');
 
 		if (!empty($config['apiKey'])) {
-			$generator->setFactory('Kdyby\Extension\QrEncode\QrRemoteGenerator');
+			$generator->setFactory('Kdyby\QrEncode\QrRemoteGenerator');
 
 		} else {
-			$generator->setFactory('Kdyby\Extension\QrEncode\QrGenerator');
+			$generator->setFactory('Kdyby\QrEncode\QrGenerator');
 		}
 	}
 
