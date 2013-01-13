@@ -1,36 +1,36 @@
 {
-    "name":"kdyby/qr-encode",
-    "type":"library",
-    "description":"QrEncode wrapper for Nette Framework",
-    "keywords":["nette", "kdyby", "qr", "qrcode", "qrencode"],
-    "homepage":"http://kdyby.org",
-    "license":["BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
-    "authors":[
-        {
-            "name":"Filip Procházka",
-            "homepage":"http://filip-prochazka.com"
-        }
-    ],
-    "support":{
-        "email":"filip@prochazka.su",
-        "issues":"https://github.com/kdyby/qr-encode/issues"
-    },
-    "require":{
-        "nette/nette":"*"
-    },
+	"name": "kdyby/qr-encode",
+	"type": "library",
+	"description": "QrEncode wrapper for Nette Framework",
+	"keywords": ["nette", "kdyby", "qr", "qrcode", "qrencode"],
+	"homepage": "http://kdyby.org",
+	"license": ["BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
+	"authors": [
+		{
+			"name": "Filip Procházka",
+			"homepage": "http://filip-prochazka.com"
+		}
+	],
+	"support": {
+		"email": "filip@prochazka.su",
+		"issues": "https://github.com/kdyby/qr-encode/issues"
+	},
+	"require": {
+		"nette/nette": "*"
+	},
 	"require-dev": {
 		"nette/tester": "@dev"
 	},
 	"minimum-stability": "dev",
-    "suggest": {
-        "kdyby/curl": "It's required for using a remote QrCode encoder provider."
-    },
-    "autoload":{
-        "psr-0":{
-            "Kdyby\\QrEncode":"src/"
-        },
-        "classmap":[
-            "src/Kdyby/QrEncode/exceptions.php"
-        ]
-    }
+	"suggest": {
+		"kdyby/curl": "It's required for using a remote QrCode encoder provider."
+	},
+	"autoload": {
+		"psr-0": {
+			"Kdyby\\QrEncode": "src/"
+		},
+		"classmap": [
+			"src/Kdyby/QrEncode/exceptions.php"
+		]
+	}
 }
