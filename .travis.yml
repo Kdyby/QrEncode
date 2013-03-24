@@ -8,6 +8,6 @@ before_script:
   - composer self-update
   - sudo apt-get update -qq
   - sudo apt-get install -qq qrencode
-  - composer install --no-interaction --quiet --dev
+  - composer install --no-interaction --prefer-dist --quiet --dev
 
 script: php tests/lint.php src/Kdyby/ tests/KdybyTests/ && VERBOSE=true ./tests/run-tests.sh -s tests/KdybyTests/
