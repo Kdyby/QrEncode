@@ -2,7 +2,7 @@ Kdyby/QrEncode
 ======
 
 [![Build Status](https://travis-ci.org/Kdyby/QrEncode.svg?branch=master)](https://travis-ci.org/Kdyby/QrEncode)
-[![Downloads this Month](https://img.shields.io/packagist/dm/Kdyby/QrEncode.svg)](https://packagist.org/packages/Kdyby/QrEncode)
+[![Downloads this Month](https://img.shields.io/packagist/dm/kdyby/qr-encode.svg)](https://packagist.org/packages/kdyby/qr-encode)
 [![Latest stable](https://img.shields.io/packagist/v/kdyby/qr-encode.svg)](https://packagist.org/packages/kdyby/qr-encode)
 
 
